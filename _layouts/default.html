@@ -33,7 +33,7 @@
 		<script>
 			Array.prototype.forEach.call(document.querySelectorAll('time'), function(time) {
 				var date = new Date(time.getAttribute('datetime'));
-				time.innerHTML = date.toLocaleString().replace(/(:00)? ?(UTC\+\d)?$/, '');
+				if (!time.innerHTML) time.innerHTML = date.toLocaleString().replace(/(:00)? ?(UTC\+\d)?$/, '');
 			});
 		</script>
 
