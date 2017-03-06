@@ -31,9 +31,9 @@
 		</footer>
 
 		<script>
-			Array.prototype.forEach.call(document.querySelectorAll('time'), function(time) {
+			Array.prototype.forEach.call(document.querySelectorAll('.vevent time'), function(time) {
 				var date = new Date(time.getAttribute('datetime'));
-				if (!time.innerHTML) time.innerHTML = date.toLocaleString().replace(/(:00)? ?(UTC\+\d)?$/, '');
+				time.innerHTML = date.toLocaleString().replace(/(:00)? ?(UTC\+\d)?$/, '');
 			});
 		</script>
 
