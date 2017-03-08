@@ -8,7 +8,9 @@ menu_index: 4
 		{% for post in site.posts %}
 			<div class="ui segment">
 				{% if post.category == 'evenement' %}
-					Retrouvez-nous le <time datetime="{{ post.start }}"></time> pour <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.location }}).
+					<div class="vevent">
+						Retrouvez-nous le <time datetime="{{ post.start }}"></time> pour <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.location }}).
+					</div>
 				{% elsif post.startup %}
 					{% capture id %}/startup/{{ post.startup }}{% endcapture %}
 					{% for currentStartup in site.startup %}
